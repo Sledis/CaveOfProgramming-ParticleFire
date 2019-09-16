@@ -46,10 +46,10 @@ namespace caveofprogramming{
 
 		memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 
-		m_buffer[3000] = 0xFFFFFFFF;
+		
 
 		for (int i = 0; i < SCREEN_WIDTH * SCREEN_HEIGHT; i++) {
-			m_buffer[i] = 0xFF00FFFF;
+			m_buffer[i] = 0x000000FF;
 		}
 
 
@@ -79,6 +79,10 @@ namespace caveofprogramming{
 
 
 	void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
+		if (x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT) {
+			return;
+		}
+		
 		Uint32 colour = 0;
 
 		colour += red;
@@ -104,6 +108,11 @@ namespace caveofprogramming{
 		SDL_RenderPresent(m_renderer);
 	}
 
+
+
+	void Screen::clear() {
+		memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
+	}
 }
 
 
