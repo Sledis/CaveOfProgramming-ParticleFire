@@ -130,7 +130,7 @@
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Swarm.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Particle.h" />

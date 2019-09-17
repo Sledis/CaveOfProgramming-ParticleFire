@@ -6,11 +6,12 @@ namespace caveofprogramming {
 	{
 	private:
 		Particle* m_pParticles;
+		int lastTime;
 	public:
 		Swarm();
 		~Swarm();
-		void update();
-		const static int NPARTICLES = 1000;
+		void update(int elapsed);
+		const static int NPARTICLES = 5000;
 		const Particle* const getParticles() { return m_pParticles; };
 	};
 }
