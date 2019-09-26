@@ -47,6 +47,7 @@ int main(int argc, char* args[])
 
 		}
 		screen.boxBlur();
+		
 
 		screen.update();
 

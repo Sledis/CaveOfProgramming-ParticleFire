@@ -33,7 +33,7 @@ namespace caveofprogramming {
 		time(&timer2);
 		double excessLife = difftime(timer2, birth) - 10;
 		if (excessLife > 0) {
-			if (rand() < (RAND_MAX*excessLife )/ 300) {
+			if (rand() < (RAND_MAX*excessLife )/300) {
 				m_x = -1;
 				m_y = -1;
 				m_speed = 0;
@@ -57,9 +57,6 @@ namespace caveofprogramming {
 		//}
 		if (rand() < RAND_MAX / 250) {
 			init();
-			
-			std::cout << "init called" << std::endl;
-			
 		}
 	}
 }

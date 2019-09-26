@@ -10,8 +10,8 @@ namespace caveofprogramming{
 	
 
 	bool Screen::init() {
-		const int SCREEN_WIDTH = 800;
-		const int SCREEN_HEIGHT = 600;
+		const int SCREEN_WIDTH = Screen::SCREEN_WIDTH;
+		const int SCREEN_HEIGHT = Screen::SCREEN_HEIGHT;
 
 		if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 			
@@ -152,6 +152,9 @@ namespace caveofprogramming{
 		}
 	}
 
+
+
+	
 }
 
 
